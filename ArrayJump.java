@@ -30,7 +30,7 @@ public class ArrayJump {
         int tracker = 0;
         while(end > 0) {
             if (arr[tracker] == 0) {return false;}
-            if (end - arr[tracker] == 0) {return true;}
+            if (arr[tracker] - end == 0) {return true;}
             if (arr[tracker] - end > 0) {return false;}
             if (arr[tracker] - end < 0) {
                 tracker += arr[tracker];
