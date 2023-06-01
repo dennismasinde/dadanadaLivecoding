@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayJump arrayTest = new ArrayJump();
-        System.out.println(arrayTest.jumpTest(new int[]{3,2,1,0,4}));
+        System.out.println(arrayTest.jumpTest(new int[]{2,3,1,1,4}));
 
         Main main = new Main();
         ListNode current = main.addTwoNumbers(
