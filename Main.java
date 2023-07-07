@@ -16,7 +16,6 @@ public class Main {
         System.out.println("Should return true: " + arrayTest.jumpTest(new int[]{2,3,1,1,4}));
         System.out.println("Should return false: " + new ArrayJump().jumpTest(new int[]{3,2,1,0,4}));
 
-
         Main main = new Main();
         ListNode current = main.addTwoNumbers(
                 new ListNode(4, new ListNode(4, new ListNode(6))),
@@ -27,7 +26,19 @@ public class Main {
             System.out.print(current.val + " --> ");
             current = current.next;
         }
-        System.out.print("null");
+        System.out.println("null");
+
+        Main main1 = new Main();
+        ListNode current1 = main1.sumNodeValues(
+                new ListNode(4, new ListNode(4, new ListNode(6))),
+                new ListNode(5, new ListNode(1, new ListNode(2)))
+        );
+
+        while(current1 != null) {
+            System.out.print(current1.val + " --> ");
+            current1 = current1.next;
+        }
+        System.out.println("null");
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -51,5 +62,28 @@ public class Main {
 
         }
         return temp.next;
+    }
+
+    public ListNode sumNodeValues(ListNode node1, ListNode node2) {
+        ListNode node3 = new ListNode();
+        ListNode temp = node3;
+
+        while( node1 != null || node2 != null) {
+            int x = 0;
+            if (node1 != null) {
+                x = node1.val;
+                node1 = node1.next;
+            }
+
+            int y = 0;
+            if (node2 != null) {
+                y = node2.val;
+                node2 = node2.next;
+            }
+
+            temp.next = new ListNode(x + y );
+            temp = temp.next;
+        }
+        return node3.next;
     }
 }
