@@ -12,12 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayJump arrayTest = new ArrayJump();
-        System.out.println("Should return true: " + arrayTest.jumpTest(new int[]{2,3,1,1,4}));
+        System.out.println("Should return true: " + new ArrayJump().jumpTest(new int[]{2,3,1,1,4}));
         System.out.println("Should return false: " + new ArrayJump().jumpTest(new int[]{3,2,1,0,4}));
 
-        Main main = new Main();
-        ListNode current = main.addTwoNumbers(
+        ListNode current = new Main().addTwoNumbers(
                 new ListNode(4, new ListNode(4, new ListNode(6))),
                 new ListNode(5, new ListNode(1, new ListNode(2)))
         );
@@ -28,8 +26,7 @@ public class Main {
         }
         System.out.println("null");
 
-        Main main1 = new Main();
-        ListNode current1 = main1.sumNodeValues(
+        ListNode current1 = new Main().sumNodeValues(
                 new ListNode(4, new ListNode(4, new ListNode(6))),
                 new ListNode(5, new ListNode(1, new ListNode(2)))
         );
